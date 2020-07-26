@@ -1,0 +1,58 @@
+title{
+    text-transform: uppercase;
+
+}
+form{
+	background: url("imagens/ca.png") no-repeat 100% 85%;
+	width:500px;
+	margin: auto;
+}
+
+input{
+
+	font-family:sans-serif;
+	font-weight: normal;
+	font-size:13pt;
+}
+input:hover {
+	background-color: #dddddd;
+}
+select{
+	font-family:sans-serif;
+	font-weight: normal;
+	font-size:13pt;}
+	select:hover{
+		background-color: #dddddd;
+	}
+	legend{
+        text-align: center;
+		color:black;
+		font-weight: bold;
+		font-size: 18pt;
+		font-family: sans-serif;
+		margin: auto;
+	}
+	input[type="image"]{
+		width: 85px;
+    }
+    p{
+        font-size: 14pt;
+text-align: justify;
+text-indent: 50px;
+        
+    }
+    
+    fieldset{
+        height: auto;
+	}
+	tr{
+		border-bottom: 2 px solid black;
+
+	}
+    #final{
+	border-bottom: 2 px solid black;
+	border-top: 2 px solid black;
+	border-left: 2 px solid black;
+	border-right: 2 px solid black;
+
+	}

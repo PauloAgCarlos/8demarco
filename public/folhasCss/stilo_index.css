@@ -1,0 +1,51 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url(../imagens/index.jpg);
+    background-size: 100%;
+    color: white;
+    font-family: Arial;
+
+   
+}
+input{
+    display: block;
+    height: 55px;
+    width: 400px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 2px solid black;
+    font-size: 14pt;
+   
+}
+
+.login{
+    width:420px;
+    margin: 150px auto 0px auto;
+
+}
+h1{
+    text-shadow: 2px 2px 2px black;
+    text-align:center;
+    padding: 10px;
+}
+a{
+    text-decoration:none;
+
+}
+a:hover{
+    	text-decoration: underline;
+	color: white;
+		
+    
+}
+p{
+    display: block;
+    text-align: center;
+    padding:10px;
+    color: black;
+
+}

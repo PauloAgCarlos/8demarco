@@ -1,0 +1,56 @@
+table{
+    border: 1px solid #606060;
+    border-spacing:0px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .disciplina{
+      border: 1px solid #606060;
+      padding: 25px;	
+  }
+ table td{
+    border: 1px solid #606060;
+  }
+  table td#dis{
+      padding: 08px;
+      background-color: #606060;
+  }
+  table td input{
+      width: 25%;
+      border-spacing:0px;
+  }
+  textarea:hover{
+      background-color: #dddddd
+  }
+  textarea{
+      font-family: Arial;
+      font-size: 12pt;
+      width: 80%;
+  }
+  fieldset{
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto; 
+      align-content: center;
+  }
+  
+header img{
+    width: 60px;
+}
+  h1{
+      text-align: center;
+  }
+  	
+
+      fieldset{
+          margin: auto;
+          width: 500px;
+      }
+      legend{
+        text-align: center;
+		color:#dddddd;
+		font-weight: bold;
+		font-size: 18pt;
+		font-family: sans-serif;
+	}
+  

@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-shadow: 2px 2px 4px black;
+    text-align: center;
+    font-size: 26pt;
+}
+.dir{
+text-align: left 20px;
+}
+header{
+    text-align: center;
+    font-size: 18pt;
+}
+.conteudo p{
+    text-align: justify;
+    text-align: center;
+  
+}
+.v{
+    right: 20%;
+}
+header img{
+    width: 60px;
+}
+.nome{
+    font-size: ;
+}
+.sga{
+    text-align: right;
+}
+.primeira{
+    text-align: center;
+    font-size: 20pt;
+    text-transform: uppercase;
+}
+table{
+    border: 1px solid #606060;
+    border-spacing:0px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  table td{
+      border: 1px solid #606060;	
+  }
+  table td{
+      padding: 8px;
+      
+  }
+  table td input{
+      width: 25%;
+      border-spacing:0px;
+  }
+  .certificado{
+      left: 500px;
+      right: 500px;
+      border-bottom: 2px solid black;
+      border-top: 2px solid black;
+      border-left: 2px solid black;
+      border-right: 2px solid black;
+  }
+  input{
+      padding: 5px;
+  }
+  input:hover{
+      background-color: #606060;
+  }
+  .ultima{
+      text-decoration: #606060;
+  }

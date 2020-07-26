@@ -1,0 +1,66 @@
+@charset="utf-8";
+
+header#cabecalho{
+		text-align: center;
+		font-family: sans-serif;
+		font-size: 12pt;
+		color: #60606060;
+}
+img{
+	width: 200px;
+	margin: auto;
+}
+h1 {		
+			color:#606060;
+			font-family: Arial;
+			text-align:center;
+		}
+h2{		
+			color:#606060;
+			font-family: Arial;
+			text-align:center;
+		}
+p{
+			font-family: Arial;
+			font-size: 13pt;
+			text-align: center;
+		}
+		
+body{
+			background-color: #FFFFFF;
+		}
+form fieldset{
+			width: 500px;
+			margin: auto;
+		}
+		.card{
+			background-color: black;
+			color: blanchedalmond;
+		}
+		.inf{
+			text-align: center;
+		}
+div#center{
+	display: block;
+	margin: auto;
+	margin-right: 180px;
+	width: 800px;
+}
+#dis{
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+p{
+	display: block;
+}
+p{
+
+	text-align: center;
+	text-align: justify;
+	text-indent: 50px;
+	
+}
+.botao:hover{
+	color: black;
+}
+		
