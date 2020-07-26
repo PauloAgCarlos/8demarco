@@ -5,10 +5,11 @@
  <p> <a href="caderneta4Final.html"><input type="submit" value="FIM T" class="botao"></a> </p>
 	<table>
 			<h1>Caderneta de Avaliações(4ª classe)</h1>
-			<form method="post">
+			<form method="post" action="/salvar_caderneta">
+				@csrf
 				<fieldset>
 					<legend>Dados Cruciais</legend>
-					<p>Nome: <input type="text" name="tNomeCaderneta6" id="cNomeCaderneta6"></p> 
+					<p>Nome: <input type="text" name="tNomeCaderneta" id="cNomeCaderneta6"></p> 
 					<p> Nº de SGA: <input type="number" name="tNumeroSGA" id="cNumeroSGA"></p> 
 				</fieldset>
 	Trimestre<input type="number" id="pre" name="tTrimestre"/> Semana<input type="week" id="pre" name="tSemana"/> Data<input type="date" id="pre" name="tData"><br/><br/>
@@ -27,11 +28,13 @@
 						<tr><td>Educação Musical</td><td><input type="number" name="tNotaMusical4" id="cNotaMusical4"></td><td><input type="number" name="tNotaMusical4" id="cNotaMusical4"></td><td><input type="number" name="tNotaMusical4" id="cNotaMusical4"></td><td><input type="number" name="tNotaMusical4" id="cNotaMusical4"></td><td><input type="number" name="tNotaMusical4" id="cNotaMusical4"></td><td><input type="number" name="tNotaMusical4" id="cNotaMusical4"></td></tr>
 						<!-- Dados de Ed. Física-->
 						<tr><td>Educação Física</td><td><input type="number" name="tNotaFisica4" id="cNotaFisica4"></td><td><input type="number" name="tNotaFisica4" id="cNotaFisica4"></td><td><input type="number" name="tNotaFisica4" id="cNotaFisica4"></td><td><input type="number" name="tNotaFisica4" id="cNotaFisica4"></td><td><input type="number" name="tNotaFisica4" id="cNotaFisica4"></td><td><input type="number" name="tNotaFisica4" id="cNotaFisica4"></td></tr>
+
+						<center><input type="submit" class="botao" value="/salvar_caderneta"/></center>
 			</form>
 	</table>
 	<h3>Outras Informações</h3>
 	<textarea name="informacoes4" id="inf"></textarea>
-	<center><input type="submit" class="botao" value="ENVIAR"/></center>
+	
 	<!-- Botões para outras cadernetas-->
 	<h4>Ir para a caderneta de outras classes</h4>
 	<br><a href="cader.html"><input type="submit" value="6ª Classe" class="botao"/></a>

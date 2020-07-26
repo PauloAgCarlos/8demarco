@@ -41,6 +41,7 @@ class cadernetas1Controller extends Controller
     public function store(Request $request)
     {
         //
+        
     }
 
     /**

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\estudantes;
+use Illuminate\Support\Facades\DB;
+
 class estudantesController extends Controller
 {
     /**
@@ -14,8 +16,12 @@ class estudantesController extends Controller
     public function index()
     {
         //
-        $estudantes = estudantes::all();
-        return view('conteudos.estudantes.app_listar_estudantes', compact('estudantes'));
+        // $estudantes = estudantes::all();
+        // return view('conteudos.estudantes.app_listar_estudantes', compact('estudantes'));
+         
+        $estudantes = DB::select('select * from estudantes where id = :id', ['id' => 4]);
+
+        return view('conteudos.estudantes.app_listar_estudantes', ['estudantes' => $estudantes]);
     }
 
     /**
@@ -43,7 +49,7 @@ class estudantesController extends Controller
         $estudante->dataNascimento = $request->tData;
         $estudante->localNascimento = $request->tLocalNascimento;
         $estudante->numeroBilhete = $request->tNumeroBI;
-        $estudante->sexo = $request->tSexo;
+        $estudante->sexo = 'Masc';
         $estudante->morada = $request->tCidadeMora;
         $estudante->bairro = $request->tBairro;
         $estudante->nomeEncarregado = $request->tEn;

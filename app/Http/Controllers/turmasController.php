@@ -14,7 +14,8 @@ class turmasController extends Controller
     public function index()
     {
         //
-        return 'turmas';
+        return view('conteudos.turmas.app_turmas');
+        
     }
 
      public function ensinoP()

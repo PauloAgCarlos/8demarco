@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\matriculas;
+use app\estudantes;
 
 class matriculasController extends Controller
 {
     
     public function index()
     {
-        return 'matrículas';
+        
+        return view('conteudos.matriculas.app_matriculas');
     }
 
     

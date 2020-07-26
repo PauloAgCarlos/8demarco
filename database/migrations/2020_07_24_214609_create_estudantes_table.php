@@ -26,6 +26,7 @@ class CreateEstudantesTable extends Migration
             $table->string('nomeEncarregado');
             $table->string('relacaoComEncarregado');
             $table->string('numeroEncarregado')->default('pai');
+            $table->boolean('matriculado')->default('false');
             
             $table->timestamps();
         });

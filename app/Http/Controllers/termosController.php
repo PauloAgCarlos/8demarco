@@ -14,7 +14,7 @@ class termosController extends Controller
     public function index()
     {
         //
-        return 'termos';
+        return view('conteudos.termos.app_termos');
     }
 
     /**

@@ -6,10 +6,11 @@
 
 	<table>
 			<h1>Caderneta de Avaliações(2ª classe)</h1>
-			<form method="post">
+			<form method="post" action="/salvar_caderneta">
+				@csrf
 				<fieldset>
 					<legend>Dados Cruciais</legend>
-					<p>Nome: <input type="text" name="tNomeCaderneta6" id="cNomeCaderneta6"></p> 
+					<p>Nome: <input type="text" name="tNomeCaderneta" id="cNomeCaderneta6"></p> 
 					<p> Nº de SGA: <input type="number" name="tNumeroSGA" id="cNumeroSGA"></p> 
 				</fieldset>
 
@@ -29,11 +30,12 @@
 						<tr><td>Educação Musical</td><td><input type="number" name="tNotaMusical2" id="cNotaMusical2"></td><td><input type="number" name="tNotaMusical2" id="cNotaMusical2"></td><td><input type="number" name="tNotaMusical2" id="cNotaMusical2"></td><td><input type="number" name="tNotaMusical2" id="cNotaMusical2"></td><td><input type="number" name="tNotaMusical2" id="cNotaMusical2"></td><td><input type="number" name="tNotaMusical2" id="cNotaMusical2"></td></tr>
 						<!-- Dados de Ed. Física-->
 						<tr><td>Educação Física</td><td><input type="number" name="tNotaFisica2" id="cNotaFisica2"></td><td><input type="number" name="tNotaFisica2" id="cNotaFisica2"></td><td><input type="number" name="tNotaFisica2" id="cNotaFisica2"></td><td><input type="number" name="tNotaFisica2" id="cNotaFisica2"></td><td><input type="number" name="tNotaFisica2" id="cNotaFisica2"></td><td><input type="number" name="tNotaFisica2" id="cNotaFisica2"></td></tr>
+						<center><input type="submit" value="/salvar_caderneta" class="botao"/></center>
 			</form>
 	</table>
 	<h3>Outras Informações</h3>
 	<textarea name="informacoes" id="inf"></textarea>
-	<center><input type="submit" value="ENVIAR" class="botao"/></center>
+	
 	<!-- Botões para outras cadernetas-->
 	<h4>Ir para a caderneta de outras classes</h4>
 	<br><a href="cader.html"><input type="submit" value="6ª Classe" class="botao"/></a>

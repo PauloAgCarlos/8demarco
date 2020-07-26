@@ -5,13 +5,14 @@
 <p><a href="cader6Final.html"><input type="submit" value="FIM T" class="botao"> </a></p>
 	<table>
 			<h1>Caderneta de Avaliações(6ª classe)</h1>
-			<form method="post">
+			<form method="post" action="/salvar_caderneta">
+				@csrf
 				<fieldset>
 					<legend>Dados Cruciais</legend>
-					<p>Nome: <input type="text" name="tNomeCaderneta6" id="cNomeCaderneta6"></p> 
+					<p>Nome: <input type="text" name="tNomeCaderneta" id="cNomeCaderneta6"></p> 
 					<p> Nº de SGA: <input type="number" name="tNumeroSGA" id="cNumeroSGA"></p> 
 				</fieldset>
-<label for="cTrmistre6">Trimestre </label><input type="number" name="tTrmistre6" id="cTrmistre6"/> Semana<input type="week" name="tSemana6" id="cSemana6"/> Data<input type="date" name="tData6" id="cData6"><br/><br/>
+<label for="cTrmistre6">Trimestre </label><input type="number" name="tTrmistre6" id="cTrmistre6"/> Semana<input type="week" name="tSemana" id="cSemana6"/> Data<input type="date" name="tData6" id="cData6"><br/><br/>
 <tr><td id="dis">Disciplinas</td><td id="dis">Segunda</td><td id="dis">Terça</td><td id="dis">Quarta</td><td id="dis">Quinta</td><td id="dis">Sexta</td><td id="dis">MACs</td></tr>
 						
 						<!-- Tabelas com imputes para preencher as notas mano-->
@@ -34,11 +35,13 @@
 		<tr><td>Educação Musical</td><td><input type="number" name="tNotaEMusical" id="cNotaEMusical"></td><td><input type="number" name="tNotaEMusical" id="cNotaEMusical"></td><td><input type="number"  name="tNotaEMusical" id="cNotaEMusical"></td><td><input type="number" name="tNotaEMusical" id="cNotaEMusical"></td><td><input type="number"  name="tNotaEMusical" id="cNotaEMusical"></td><td><input type="number"  name="tNotaEMusical" id="cNotaEMusical"></td></tr>
 		<!-- Dados de Ed. Física-->
 		<tr><td>Educação Física</td><td><input type="number" name="tNotaEFisica" id="cNotaEFisica"></td><td><input type="number"name="tNotaEFisica" id="cNotaEFisica"></td><td><input type="number"name="tNotaEFisica" id="cNotaEFisica"></td><td><input type="number"name="tNotaEFisica" id="cNotaEFisica"></td><td><input type="number"name="tNotaEFisica" id="cNotaEFisica"></td><td><input type="number"name="tNotaEFisica" id="cNotaEFisica"></td></tr>
+
+		<center><input type="submit" class="botao" value="/salvar_caderneta"/></center>
 		</form>
 	</table>
 	<h3>Outras Informações</h3>
 	<textarea name="tInformacoes" id="cInformacoes"></textarea>
-	<center><input type="submit" class="botao" value="ENVIAR"/></center>
+	
 	<!-- Botões para outras cadernetas-->
 	<h4>Ir para a caderneta de outras classes</h4>
 	<br><a href="caderneta5.html"><input type="submit" value="5ª Classe" class="botao"/></a>

@@ -5,13 +5,14 @@
  <p> <a href="caderneta5Final.html"><input type="submit" value="FIM T" class="botao"></a> </p>
 	<table>
 		<h1>Caderneta de Avaliações(5ª classe)</h1>
-		<form method="post">
+		<form method="post" action="/salvar_caderneta">
+			@csrf
 			<fieldset>
 				<legend>Dados Cruciais</legend>
-				<p>Nome: <input type="text" name="tNomeCaderneta6" id="cNomeCaderneta6"></p> 
+				<p>Nome: <input type="text" name="tNomeCaderneta" id="cNomeCaderneta6"></p> 
 				<p> Nº de SGA: <input type="number" name="tNumeroSGA" id="cNumeroSGA"></p> 
 			</fieldset>
-<label for="cTrmistre6">Trimestre </label><input type="number" name="tTrmistre6" id="cTrmistre6"/> Semana<input type="week" name="tSemana6" id="cSemana6"/> Data<input type="date" name="tData6" id="cData6"><br/><br/>
+<label for="cTrmistre6">Trimestre </label><input type="number" name="tTrmistre" id="cTrmistre6"/> Semana<input type="week" name="tSemana" id="cSemana6"/> Data<input type="date" name="tData6" id="cData6"><br/><br/>
 <tr><td id="dis">Disciplinas</td><td id="dis">Segunda</td><td id="dis">Terça</td><td id="dis">Quarta</td><td id="dis">Quinta</td><td id="dis">Sexta</td><td id="dis">MACs</td></tr>
 					
 					<!-- Tabelas com imputes para preencher as notas mano-->
@@ -33,6 +34,9 @@
 	<tr><td>Educação Musical</td><td><input type="text"name="tNotaEMusical5" id="cNotaEMusical5"></td><td><input type="text" name="tNotaEMusical5" id="cNotaEMusical5"></td><td><input type="text" name="tNotaEMusical5" id="cNotaEMusical5"></td><td><input type="text" name="tNotaEMusical5" id="cNotaEMusical5"></td><td><input type="text"  name="tNotaEMusical5" id="cNotaEMusical5"></td><td><input type="text"  name="tNotaEMusical5" id="cNotaEMusical5"></td></tr>
 	<!-- Dados de Ed. Física-->
 	<tr><td>Educação Física</td><td><input type="text" name="tNotaEFisica5" id="cNotaEFisica5"></td><td><input type="text" name="tNotaEFisica5" id="cNotaEFisica5"></td><td><input type="text" name="tNotaEFisica5" id="cNotaEFisica5"></td><td><input type="text" name="tNotaEFisica5" id="cNotaEFisica5"></td><td><input type="text" name="tNotaEFisica5" id="cNotaEFisica5"></td><td><input type="text" name="tNotaEFisica5" id="cNotaEFisica5"></td></tr>
+
+	<center><input type="submit" class="botao" value="/salvar_caderneta"/></center>
+
 	</form>
 </table>
 

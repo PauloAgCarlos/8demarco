@@ -14,7 +14,7 @@ class pautasController extends Controller
     public function index()
     {
         //
-        return 'pautas';
+        return view('conteudos.pautas.app_pautas');
     }
 
     /**

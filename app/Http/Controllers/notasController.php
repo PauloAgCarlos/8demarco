@@ -14,7 +14,7 @@ class notasController extends Controller
     public function index()
     {
         //
-        return 'notas';
+        return view('conteudos.notas.app_notas');
     }
 
     /**
