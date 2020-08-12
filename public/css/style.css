@@ -1,15 +1,179 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
-.icon-block {
-  padding: 0 15px;
+@charset "utf-8";
+nav{
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
-.icon-block .material-icons {
-	font-size: inherit;
+nav ul li:hover {
+        background-color: #464444;
+        color: white;
+}
 
+title{
+  text-transform: uppercase;
+}
+.caso{
+  width: 500px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, .7);
+  margin: 25px auto;
+  background-color: #ffffff;
+}
+input#align{
+  display: block;
+}
+body.caso1{
+    background-color: rgba(0, 0, 0, .8);
+}
+
+footer{
+  border-top: 4px solid #606060;
+  border-spacing: 13pt;
+}
+a{
+  color: #464444;
+  
+}
+li{
+  text-decoration: none;
+}
+ul.none-decoration li a{
+  text-decoration: none;
+}
+table{
+
+  width: 50px;
+}
+table tr#titulo{
+  background-color: #464444;
+  color: #ffffff;
+  
+}
+table tr#titulo td{
+  position: relative;  
+  padding: 10px;
+  margin: 4px;
+  text-align: center;
+}
+h1{
+  background-color: #888888;
+  color: #ffffff;
+  padding:3px;
+  font-family: Arial sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+ 
+}
+img#imagem{
+  width: 200px;
+}
+body.index{
+  color: white;
+}
+body.index footer a{
+  color: white;
+}
+
+form#table td{
+padding: 10px;
+}
+
+form{
+background: url("ca.png") no-repeat 100% 85%;
+width:500px;
+margin: auto;
+}
+
+input{
+font-family:sans-serif;
+font-weight: normal;
+font-size:13pt;
+}
+input:hover {
+background-color: #dddddd;
+}
+select{
+font-family:sans-serif;
+font-weight: normal;
+font-size:13pt;}
+select:hover{
+background-color: #dddddd;
+}
+legend{
+color:black;
+font-weight: bold;
+font-size: 14pt;
+font-family: sans-serif;
+}
+input[type="image"]{
+width: 85px;
+}
+header#cabecalho{
+text-align: center;
+font-family: sans-serif;
+font-size: 12pt;
+color: #60606060;
+}
+img{
+align-items:center; 
+width: 25%;
+}
+
+table{
+border: 1px solid #606060;
+border-spacing:0px;
+margin-right: auto;
+margin-left: auto;
+}
+table td{
+margin: 40px;
+border: 1px solid #606060;	
+}
+table td#dis{
+padding: 08px;
+background-color: #606060;
+}
+table td input{
+width: 25%;
+border-spacing:0px;
+}
+textarea:hover{
+background-color: #dddddd
+}
+textarea{
+font-family: Arial;
+font-size: 12pt;
+width: 80%;
+}
+fieldset{
+
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+align-content: center;
+}
+fieldset{
+margin: auto;
+width: 500px;
+}
+.botao{
+background-color: green;
+color: white;
+width: 120px;
+padding: 10px;
+border-radius: 10px;
+box-shadow: 2px 2px 4px black
+}
+.botao:hover{
+color: black;
+}
+p{
+text-decoration: center;
+}
+.comentario{
+border-top: 2px solid rgb(66, 64, 64);
+}
+.left{
+border-left: 2px solid rgb(49, 47, 47);
+}
+textarea{
+background-color: white;
 }

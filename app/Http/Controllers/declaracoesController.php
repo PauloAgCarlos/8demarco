@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class declaracoesController extends Controller
 {
     /**
@@ -14,7 +14,12 @@ class declaracoesController extends Controller
     public function index()
     {
         //
-        return view('conteudos.declaracoes.app_declaracoes');
+         if (Auth::check()) {
+
+             return view('conteudos.declaracoes.app_declaracoes');
+         }
+        return redirect('/login');
+        
     }
 
     

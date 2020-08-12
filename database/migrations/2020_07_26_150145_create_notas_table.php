@@ -10,12 +10,19 @@ class CreateNotasTable extends Migration
     public function up()
     {
         Schema::create('notas', function (Blueprint $table) {
-            $table->id();
-            $table->string('aluno');
+            $table->increments('id');
+            $table->integer('estudante_id')->unsigned();
+            $table->integer('disciplina_id')->unsigned();
             $table->string('descricao');
             $table->string('disciplinas');
             $table->integer('valor');
 
+            $table->foreign('estudante_id')->references('id')->on('estudantes')->onDelete('cascade');
+            $table->foreign('disciplina_id')->references('id')->on('disciplinas')->onDelete('cascade');
+
+            $table->string('criadoPor')->nullable();
+            $table->string('editadoPor');
+            
             $table->timestamps();
         });
     }

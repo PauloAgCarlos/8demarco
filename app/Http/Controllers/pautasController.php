@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class pautasController extends Controller
 {
     /**
@@ -14,7 +14,12 @@ class pautasController extends Controller
     public function index()
     {
         //
-        return view('conteudos.pautas.app_pautas');
+        if (Auth::check()) {
+
+             return view('conteudos.pautas.app_pautas');
+         }
+        return redirect('/login');
+        
     }
 
     /**

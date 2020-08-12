@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class certificadosController extends Controller
 {
@@ -14,7 +15,12 @@ class certificadosController extends Controller
     public function index()
     {
         //
-        return 'certificados';
+        if (Auth::check()) {
+
+             return 'certificados';
+         }
+        return redirect('/login');
+       
     }
 
     /**

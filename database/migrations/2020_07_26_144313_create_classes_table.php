@@ -18,6 +18,10 @@ class CreateClassesTable extends Migration
             $table->string('nome');
             $table->string('disciplinas');
 
+
+            $table->string('criadoPor')->nullable();
+            $table->string('editadoPor');
+
             $table->timestamps();
         });
     }

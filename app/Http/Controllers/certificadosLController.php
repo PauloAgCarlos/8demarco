@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class certificadosLController extends Controller
 {
@@ -14,7 +15,12 @@ class certificadosLController extends Controller
     public function index()
     {
         //
-        return view('conteudos.certificadosL.app_certificados');
+         if (Auth::check()) {
+
+             return view('conteudos.certificadosL.app_certificados');
+         }
+        return redirect('/login');
+        
     }
 
     /**

@@ -3,13 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\estudantes;
+use Illuminate\Support\Facades\Auth;
 
 class certificados9Controller extends Controller
 {
     
     public function index()
     {
-       return view('conteudos.certificados9.app_certificados');
+       
+         if (Auth::check()) {
+
+             return view('conteudos.certificados9.app_certificados');
+         }
+        return redirect('/login');
+
     }
  
     public function create()
@@ -26,14 +34,17 @@ class certificados9Controller extends Controller
     public function show($id)
     {
         //
+         if (Auth::check()) {
+
+             $estudante = estudantes::find($id);
+        return view('conteudos.certificados9.app_visualizar_certificado', compact('estudante'));
+         }
+        return redirect('/login');
+
+        
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+     
     public function edit($id)
     {
         //

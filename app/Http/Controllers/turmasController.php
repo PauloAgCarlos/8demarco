@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\turmas;
+use Illuminate\Support\Facades\Auth;
 class turmasController extends Controller
 {
     /**
@@ -14,20 +15,37 @@ class turmasController extends Controller
     public function index()
     {
         //
-        return view('conteudos.turmas.app_turmas');
+          if (Auth::check()) {
+
+             $turmas = turmas::all();
+        return view('conteudos.turmas.app_turmas', compact('turmas'));
+         }
+        return redirect('/login');
+        
         
     }
 
      public function ensinoP()
     {
         //
-        return view('conteudos.turmas.app_listar_turmas_ensino_primario');
+         if (Auth::check()) {
+
+            return view('conteudos.turmas.app_listar_turmas_ensino_primario');
+         }
+        return redirect('/login');
+        
+        
     }
 
      public function primeiroCiclo()
     {
         //
-        return view('conteudos.turmas.app_listar_turmas_primeiro_ciclo');
+         if (Auth::check()) {
+
+            return view('conteudos.turmas.app_listar_turmas_primeiro_ciclo');
+         }
+        return redirect('/login');
+        
     }
 
     public function create()

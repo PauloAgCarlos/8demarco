@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\notas;
+use Illuminate\Support\Facades\Auth;
 class notasController extends Controller
 {
     /**
@@ -14,7 +15,12 @@ class notasController extends Controller
     public function index()
     {
         //
-        return view('conteudos.notas.app_notas');
+        if (Auth::check()) {
+
+             return view('conteudos.notas.app_notas');
+         }
+        return redirect('/login');
+        
     }
 
     /**
@@ -47,6 +53,14 @@ class notasController extends Controller
     public function show($id)
     {
         //
+    }
+
+    public function estudante($id)
+    {
+        //
+        $nota = notas::find(3);
+
+        echo $nota->estudante->nome;
     }
 
     /**

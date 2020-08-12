@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class cadernetas1Controller extends Controller
 {
@@ -14,7 +15,13 @@ class cadernetas1Controller extends Controller
     public function index()
     {
         //
-        return view('conteudos.cadernetas1.app_cadernetas');
+        if (Auth::check()) {
+
+             return view('conteudos.cadernetas1.app_cadernetas');
+         }
+        return redirect('/login');
+
+        
     }
     public function CadernetaFinal()
     {

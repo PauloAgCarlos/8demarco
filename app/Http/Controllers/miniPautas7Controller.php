@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class miniPautas7Controller extends Controller
 {
     /**
@@ -24,7 +24,12 @@ class miniPautas7Controller extends Controller
     public function create()
     {
         //
-        return view('conteudos.miniPautas7.app_criar_mini_pautas'); 
+        if (Auth::check()) {
+
+             return view('conteudos.miniPautas7.app_criar_mini_pautas'); 
+         }
+        return redirect('/login');
+        
     }
 
     /**

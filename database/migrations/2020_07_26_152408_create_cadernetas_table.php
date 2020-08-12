@@ -23,6 +23,9 @@ class CreateCadernetasTable extends Migration
             $table->string('disciplinas');
             $table->string('nota');
             $table->string('informacao');
+
+            $table->string('criadoPor')->nullable();
+            $table->string('editadoPor');
             
             $table->timestamps();
         });

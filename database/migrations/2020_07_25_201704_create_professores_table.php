@@ -29,6 +29,9 @@ class CreateProfessoresTable extends Migration
             $table->string('funcao')->default('funcao');
             
 
+            $table->string('criadoPor')->nullable();
+            $table->string('editadoPor');
+
             $table->timestamps();
         });
     }

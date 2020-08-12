@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class publicacoesController extends Controller
 {
     /**
@@ -45,7 +45,12 @@ class publicacoesController extends Controller
      */
     public function show($id)
     {
-        return view('conteudos.publicacoes.app_visualizar_publicacao');
+         if (Auth::check()) {
+
+             return view('conteudos.publicacoes.app_visualizar_publicacao');
+         }
+        return redirect('/login');
+        
     }
 
     /**

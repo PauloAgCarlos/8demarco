@@ -14,19 +14,25 @@ class CreateEstudantesTable extends Migration
     public function up()
     {
         Schema::create('estudantes', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('nome');
-            $table->string('foto')->default('foto');
+            $table->string('foto')->default('sem foto');
             $table->date('dataNascimento');
+            $table->date('dataEmissaoBilhete');
+            $table->date('dataExpiracaoBilhete');
             $table->string('localNascimento');
-            $table->string('numeroBilhete');
+            $table->integer('idade');
+            $table->string('numeroBilhete')->unique();
             $table->string('sexo')->default('Masculino');
             $table->string('morada')->default('Lubango');
             $table->string('bairro');
             $table->string('nomeEncarregado');
-            $table->string('relacaoComEncarregado');
-            $table->string('numeroEncarregado')->default('pai');
-            $table->boolean('matriculado')->default('false');
+            $table->string('relacaoComEncarregado')->default('pai');
+            $table->string('numeroEncarregado')->nullable();
+            $table->boolean('matriculado')->default(false);
+
+            $table->string('criadoPor');
+            $table->string('editadoPor');
             
             $table->timestamps();
         });

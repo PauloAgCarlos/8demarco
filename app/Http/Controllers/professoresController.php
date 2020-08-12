@@ -4,22 +4,35 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\professores;
+use File;
+use Illuminate\Support\Facades\Auth;
 
 class professoresController extends Controller
 {
   
     public function index()
     {
+          if (Auth::check()) {
+
         //
         $professores = professores::all();
        return view('conteudos.professores.app_listar_professores', compact('professores'));
+
+       }
+
+       return redirect('/login');
     }
 
     
     public function create()
     {
         //
-        return view('conteudos.professores.app_registar_professores');
+          if (Auth::check()) {
+
+            return view('conteudos.professores.app_registar_professores');
+         }
+        return redirect('/login');
+        
     }
 
     
@@ -39,26 +52,67 @@ class professoresController extends Controller
         $professor->nivelAcademico = $request->tNivelAcademico;
         $professor->bairro = $request->tBairroProfessor;
         $professor->funcao = $request->tFuncaoSGA;
+        $professor->foto = "";
+
+
+        // Verificando se a foto é válida
+        if ($request->foto) {
+            $foto = $request->foto;
+            $extensaoI =  $foto->getClientOriginalExtension();
+            if ($extensaoI!= 'jpg' && $extensaoI!= 'png') {
+                return back()->with('erro', 'Erro: foto inválida');
+            }
+
+
+        }
+ 
+         
+        // Guardar a imagem na base de dados
+
+         if ($request->foto) {
+            File::move($foto, public_path().'/imagens/professores/imag_'.$professor->id.'.'.$extensaoI);
+            $professor->foto = '/imagens/professores/imag_'.$professor->id.'.'.$extensaoI;
+            $professor->save();
+        }
+
 
         $professor->save();
-        return 'professor salvo com sucesso';
+        return redirect('/professores');
     }
 
     
     public function show($id)
     {
         //
-         return view('conteudos.professores.app_visualizar_professor');
+         if (Auth::check()) {
+
+             return view('conteudos.professores.app_visualizar_professor', ['professor' => professores::findOrFail($id)]);
+         }
+        return redirect('/login');
+        
+
     }
  
     public function edit($id)
     {
         //
+         if (Auth::check()) {
+
+             $professor =professores::find($id);
+        return view('conteudos.professores.app_editar_professor', compact('professor'));
+         }
+        return redirect('/login');
+        
     }
  
     public function update(Request $request, $id)
     {
         //
+         if (Auth::check()) {
+
+              
+         }
+        return redirect('/login');
     }
 
     /**

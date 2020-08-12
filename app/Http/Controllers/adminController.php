@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class adminController extends Controller
 {
@@ -13,13 +14,20 @@ class adminController extends Controller
      */
     public function index()
     {
+         if (Auth::check()) {
+
+              $user = Auth::user();
+         
+        return view('conteudos.admin.app_admin', compact('user'));
+         }
+        return redirect('/login');
         //
-        return view('conteudos.admin.app_admin');
+        
     }
     public function login()
     {
             //
-         return view('conteudos.admin.app_login');
+         return 'App';
     }
 
     /**
@@ -30,6 +38,13 @@ class adminController extends Controller
     public function create()
     {
         //
+         if (Auth::check()) {
+
+            $user = Auth::user();
+         
+         
+         }
+        return redirect('/login');
     }
 
     /**

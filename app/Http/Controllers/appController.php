@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class appController extends Controller
 {
@@ -13,9 +14,19 @@ class appController extends Controller
      */
     public function index()
     {
-        //
-        return view('conteudos.app_index');
+        // 
+             return view('conteudos.app_index');
+        
     }
+ 
+ 
+    public function registar()
+    {
+        // 
+             return redirect('/register');
+        
+    }
+ 
 
     
     public function create()
@@ -78,4 +89,6 @@ class appController extends Controller
     {
         //
     }
+
+     
 }
