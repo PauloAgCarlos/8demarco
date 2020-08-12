@@ -1,40 +1,53 @@
-<nav class="light-blue lighten-1 z-depht-4" role="navigation">
-    <div class="nav-wrapper container "><a id="logo-container" href="/" class="brand-logo">8 DE MARÇO</a>
-      <ul class="right hide-on-med-and-down">
-       <li><a href="/registar_matriculas"> MATRÍCULAS </a></li>
-        <li>  <!-- Modal Trigger -->
-          <a class="waves-effect waves-light  modal-trigger" href="#modal1">NOTAS</a>
-        <!-- Modal Structure -->
-          <div id="modal1" class="modal modal-fixed-footer">
-            <div class="modal-content">
-              <h4 class="black-text">PREENCHER NOTAS DO:</h4>
-              <p class="black-text"> Apartir daqui  o senhor(a) poderá preencher as notas dos estudantes. Repare que abaixo tem dois botões ou  duas opções( Iº Ciclo e Ens.Primário). Isto quer dizer que se o senhor(a) deseja preencher as notas do ensino primário então clique em "ENS. PRIMÁRIO".
-              Caso o senhor(a) deseja preencher as notas do Iº CICLO então clique em "Iº CICLO" </p>
-              <p>E para sair desta janela clique fora da mesma.</p>
+ <header>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary mb-2">
+    <a class="navbar-brand" href="/admin">8 de Março</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a class="nav-link" href="/">Início</a></li>
+        <li class="nav-item  active dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Registar</a>
+          <div class="dropdown-menu">
+            <a href="/registar_estudante" class="dropdown-item">Estudantes</a>
+            <a href="/registar_disciplinas" class="dropdown-item">Disciplinas</a>
+            <a href="/registar_professor" class="dropdown-item">Professores</a>
+            <a href="/registar_matriculas" class="dropdown-item">Matrículas</a>
+            
+              
+          </div>
+          </li>
+        <li class="nav-item  active dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Notas</a>
+        <div class="dropdown-menu">
+          <a href="/notas" class="dropdown-item"> Ens. Primário</a>
+          <a href="/notas" class="dropdown-item"> Iº Ciclo</a>
+        </div>
+        </li>
+        <li class="nav-item  active dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Turmas</a>
+          <div class="dropdown-menu">
+            <a href="/turmas_ensino_primario" class="dropdown-item"> Ens. Primário</a>
+            <a href="/turmas_primeiro_ciclo" class="dropdown-item"> Iº Ciclo</a>
+          </div>
+          </li>
+          <li class="nav-item  active dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Listar</a>
+            <div class="dropdown-menu">
+              <a href="/estudantes" class="dropdown-item"> Estudantes</a>
+              <a href="/professores" class="dropdown-item"> Professores</a>
             </div>
-            <div class="modal-footer">
-              <a href="html/telaCader1.html" class="modal-close waves-effect waves-green btn">Iº CICLO</a>
-              <a href="html/telaCader.html" class="modal-close waves-effect waves-green btn">ENS.PRIMÁRIO</a>
-            </div>
-          </div> </li>
-        <li><a href="/turmas_ensino_primario"> Turmas</a></li>
-        <li><a href="/certificados9"> Certificados</a></li>
-        <li><a href="/estudantes"> Listar</a></li>
-        <li><a href="visualizar_termo"> Termos</a></li>
-        <li><a href="#"> Horários</a></li>
-        <li><a href="#"> Pautas</a></li>
-      </ul> 
-
-      <ul id="nav-mobile" class="sidenav">
-       <li><a href="/matriculas"> MATRÍCULAS </a></li>
-        <li><a href="/notas"> notas</a></li>
-        <li><a href="/turmas"> Turmas</a></li>
-        <li><a href="/Certificados"> Certificados</a></li>
-        <li><a href="estudantes"> Listar</a></li>
-        <li><a href="/termos"> Termos</a></li>
-        <li><a href="html/horarios.html"> Horários</a></li>
-        <li><a href="/pautas"> Pautas</a></li>
+            </li>
+        <li class="nav-item active"><a class="nav-link" href="/certificados9">Certificados</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/visualizar_termo">Termos</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/horarios">Horários</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/criar_mini_pautas">Pautas</a></li>
+       
+        
+        
+        
       </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <form class="form-inline mt-2 mt-md-0" action="/pesquisar_estudante">
+        <input name="texto" class="form-control mr-sm-2" type="text" placeholder="Procurar" aria-label="Search">
+        <button class="btn btn-dark my-2 my-sm-0" type="submit">Pesquisar</button>
+      </form>
     </div>
-  </nav> 
+  </nav>
+</header>

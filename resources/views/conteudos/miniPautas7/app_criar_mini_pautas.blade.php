@@ -1,6 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 
 @section('conteudo')
+
+<link rel="stylesheet" href="../folhasCss/stilo_pautas.css"/>
 
  <form action="" method="POST">
         <fieldset>

@@ -2,88 +2,26 @@
 
 @section('conteudo')
 
+<link rel="stylesheet" type="text/css" href="{{ asset('folhasCss/style.css') }}">
+
+
+<br><br><br><br>
 	<div>
-		<a href="turmas1.html"><input type="submit" value="TURMAS 1º CICLO" class="btn"/></a>
-		
-		<h1>TURMAS ENS. PRIMÁRIO</h1>
-		<table class="center">
-			<thead>
-			  <tr>
-				  <th>INICIAÇÃO</th>
-				  <th>1 ª CLASSE</th>
-			  </tr>
-			</thead>
-	
-			<tbody>
-			  <tr>
-				<td><a href="turmaA.html"> TURMA A</a></td>
-				<td><a href="#!"> TURMA A</a> </td>
-				
-			  </tr>
-			  <tr>
-				<td>TURMA B</td>
-				<td>TURMA B</td>
-				
-			  </tr>
-			  <tr>
-				<td>TURMA C</td>
-				<td>TURMA C</td>
-				
-			  </tr>
-			</tbody> <br><br><br>
-			<thead>
-				<tr>
-					<th>2 ª CLASSE</th>
-					<th>3 ª CLASSE</th>
-				</tr>
-			  </thead>
-	  
-			  <tbody>
-				<tr>
-				  <td>TURMA A</td>
-				  <td>TURMA A </td>
-				  
-				</tr>
-				<tr>
-				  <td>TURMA B</td>
-				  <td>TURMA B</td>
-				  
-				</tr>
-				<tr>
-				  <td>TURMA C</td>
-				  <td>TURMA C</td>
-				  
-				</tr>
-			  </tbody> 
-			  <thead>
-				<tr>
-					<th>4ª CLASSE</th>
-					<th>5 ª CLASSE</th>
-					<th>6ª CLASSE</th>
-				</tr>
-			  </thead>
-	  
-			  <tbody>
-				<tr>
-				<td>TURMA A</td>
-				<td>TURMA A</td>
-				<td>TURMA A </td>
-				  
-				</tr>
-				<tr>
-				  <td>TURMA B</td>
-				  <td>TURMA B</td>
-				  <td>TURMA B</td>
-				  
-				</tr>
-				<tr>
-				  <td>TURMA C</td>
-				  <td>TURMA C</td>
-				  <td>TURMA C</td>
-				  
-				</tr>
-			  </tbody> 
-		  </table>
+		<div class="caso">
+			<h1>Turmas do Ensino primário</h1>
+			
+			<table class="table">
+				<tr id="titulo"><td>Iniciação</td><td>1ª Classe</td><td>2ª Classe</td><td>3ª Classe</td><td>4ª Classe</td><td>5ª Classe</td><td>6ª Classe</td> </tr>
+				<tr><td><a href="turmaA.html">Turma A</a></td><td>Turma A</td><td>Turma A</td><td>Turma A</td><td>Turma A</td><td>Turma A</td><td>Turma A</td> </tr>
+				<tr><td>Turma B</td><td>Turma B</td><td>Turma B</td><td>Turma B</td><td>Turma B</td><td>Turma B</td><td>Turma B</td> </tr>
+				<tr><td>Turma C</td><td>Turma C</td><td>Turma C</td><td>Turma C</td><td>Turma C</td><td>Turma C</td><td>Turma C</td> </tr>
+				<tr><td>Turma D</td><td>Turma D</td><td>Turma D</td><td>Turma D</td><td>Turma D</td><td>Turma D</td><td>Turma D</td> </tr>
+				<tr><td>Turma E</td><td>Turma E</td><td>Turma E</td><td>Turma E</td><td>Turma E</td><td>Turma E</td><td>Turma E</td> </tr>
+				<tr><td>Turma F</td><td>Turma F</td><td>Turma F</td><td>Turma F</td><td>Turma F</td><td>Turma F</td><td>Turma F</td> </tr>
+			
+			</table>
+			<p class="text-center">Ir para turmas do Iº ciclo....</p>
+			<a href="turmas1.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Iº Ciclo</button></a>
 	</div>
 
 @endsection

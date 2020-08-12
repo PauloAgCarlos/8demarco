@@ -2,9 +2,10 @@
 
 @section('conteudo')
 
-   <div class="container center">
+<br><br><br><br>
+    <div class="text-center" style="background-color: white;">
     <h1>Turma A 7ª Classe</h1>
-    <table>
+    <table class="table">
      <strong><tr><td> Nº de SGA</td><td>Posição</td><td>Nome</td></tr></strong>
      <tr><td> 200104</td><td>1</td><td>António Januário Jack</td></tr>
      <tr><td> 200102</td><td>2</td><td>António Januário Jack</td></tr>
@@ -30,5 +31,6 @@
     </table>
 </div>
 
+   
 
 @endsection

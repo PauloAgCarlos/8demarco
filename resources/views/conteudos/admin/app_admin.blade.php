@@ -1,11 +1,59 @@
-@extends('layouts.app')
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>ZONA ADMINISTRATIVA</title>
 
-@section('conteudo')
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body class="#212121 grey darken-4">
+
+
+<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo letf">8 DE MARÇO</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/notas"> notas</a></li>
+        <li><a href="/criar_mini_pautas"> pautas</a></li>
+        <li><a href="registar_matriculas"> matrículas</a></li>
+        <li><a href="/certificados9"> CERTIFICADOS</a></li>
+        <li><a href="#"> Horários</a></li>
+        <li><a href="../html/anuncios.html"> ANÚNCIOS</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="../html/notasL.html"> notas</a></li>
+        <li><a href="../html/pautasL.html"> pautas</a></li>
+        <li><a href="../html/matriculasL.html"> matrículas</a></li>
+        <li><a href="../html/certificadosL.html"> CERTIFICADOS</a></li>
+        <li><a href="../html/EdicaoL.html"> Horários</a></li>
+        <li><a href="../html/anuncios.html"> ANÚNCIOS</a></li>
+        <li><a href="../html/anuncios.html"> ANÚNCIOS</a></li>
+                        
+                 
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+<p style="color: white;"> Logado Como: {{ $user->name }} </p>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Sair da conta') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
 
 <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
       <h1 class="header center orange-text">PARTE ADMINISTRATIVA</h1>
+        
       <div class="row center">
         <h5 class="header col s12 light white-text">A melhor maneira de gerenciar os dados académicos da tua instituição.</h5>
       </div>
@@ -87,5 +135,20 @@
         </div>
       </div>
     </div>
+    <div class="footer-copyright">
+      <div class="container">
+      
+      </div>
+    </div>
+  </footer>
 
-    @endsection
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+
+
+
+  </body>
+</html>

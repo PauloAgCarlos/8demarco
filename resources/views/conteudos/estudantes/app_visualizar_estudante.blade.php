@@ -2,43 +2,64 @@
 
 @section('conteudo')
 
-  <div class="container center">
+ <br><br><br><br>
+   
+    <div class="caso text-center" style="color: black;">
         <h1> Dados Importantes</h1>
-        <table>
-            
-            <tr><td>Nome</td><td>Paulo Agostinho Carlos</td> </tr>
-            <tr><td>Nº de SGA</td><td>200106</td> </tr>
-            <tr><td>Data de Nascimento</td><td>29/12/1987</td> </tr>
-            <tr><td>Local de Nascimento</td><td>Huíla-Matala</td> </tr>
-            <tr><td>Nº de BI</td><td>004612374HA045</td> </tr>
-            <tr><td>Estado cívil</td><td>Solteiro</td> </tr>
-            <tr><td>Data de Emição: </td><td>23/10/2017</td> </tr>
-            <tr><td>Data de Expiração</td><td>23/04/2022</td> </tr>
-            <tr><td>Sexo</td><td>M</td> </tr>
-            
-        </table>
+
+        <p><img src="{{ $estudante -> foto }}" class=" bd-placeholder-img rounded-circle" id="imagem"></p>
+           <p>Nome: {{ $estudante -> nome }} </p> 
+           <p>Nº de SGA: {{ $estudante -> id }}</p> 
+            <p>Data de Nascimento : {{ $estudante -> dataNascimento }}</p> 
+            <p>Local de Nascimento: {{ $estudante -> localNascimento }}</p> 
+            <p>Nº de BI: {{ $estudante -> numeroBilhete }}</p> 
+            <!-- <p>Estado cívil: {{ $estudante -> nome }}</p>  -->
+            <p>Data de Emição: {{ $estudante -> dataEmissaoBilhete }}</p> 
+            <p>Data de Expiração: {{ $estudante -> dataExpiracaoBilhete}}</p> 
+            <p> Sexo: {{ $estudante -> sexo }}</p>
         <h1> Informações Adicionais</h1>
 
-    <table>
-        <tr><td>Cidade Onde Mora</td><td>Lubango</td></tr>
-        <tr><td>Bairro</td> <td>Arco-íris</td></tr>
-    </table>
+       
+        <p>Cidade Onde Mora: {{ $estudante -> morada }}</p> 
+        <p>Bairro: {{ $estudante -> bairro }}</p> 
+    
     <h1> Informações do Encarregado de Educação</h1>
-
-    <table>
-        <tr><td>Nome</td><td>António Luciano Paulo</td></tr>
-        <tr><td>Nº de Telefone</td><td>935941628</td></tr>
-        <tr><td>Relação com a Criança</td> <td>Pai</td></tr>
-    </table>
+      <p>Nome: {{ $estudante -> nomeEncarregado }}</p>  
+       <p>Nº de Telefone: {{ $estudante -> numeroEncarregado }}</p> 
+        <p> Relação com a Criança: {{ $estudante -> relacaoComEncarregado }}</p>
+ 
     <h1> Dados Acadêmicos</h1>
-
-    <table>
-        <tr><td>Período</td><td>Laboral</td></tr>
-        <tr><td>Turno</td><td>Tarde</td></tr>
-        <tr><td>Classe</td> <td>2ª</td></tr>
-    </table>
-    <a href="cadastroE.html"> <input type="submit" value="Editar" class="btn"></a>
+    <!-- <p>Período: {{ $estudante -> nome }}</p>     -->
+    <!-- <p>Turno: {{ $estudante -> nome }}</p>     -->
+    <!-- <p> Classe: {{ $estudante -> nome }}</p>    -->
+    <!-- <p>Turma: {{ $estudante -> nome }}</p> -->
+    <p>Usuário: {{ $usuario -> name }}</p> 
+    
+    <hr>
+   
+    <h1> Dados Acadêmicos</h1>
+  
+    <p>Turno: {{ $matricula-> turno }}</p>    
+    <p> Classe: {{ $matricula -> classe }}</p>   
+    <p>Turma: {{ $matricula -> turma }}</p>
+    <hr>
+    <p>Criado por: Wander {{ $estudante -> criadoPor }}</p> 
+    <p>Data de criação: {{ $estudante -> created_at }}</p>
+    <hr>
+    
+    <p>Alterado por: {{ $estudante -> editadoPor }}</p>
+    <p>Data de Alteração: {{ $estudante -> updated_at }}</p>
+    <hr>
+    <hr>
+    <a href="/editar_estudante/{{ $estudante -> id }}"> <input type="button" value="EDITAR" class="btn btn-warning my-2 my-sm-0 "></a>
+    <a href="/confirmar_matricula/{{ $estudante -> id }}"> <input type="button" value="Confirmar Matrícula" class="btn btn-success my-2 my-sm-0"></a>
+    <a href="/eliminar_estudante/{{ $estudante -> id }}"> <input type="button" value="Eliminar" class="btn btn-danger my-2 my-sm-0"></a>
     </div>
 
+    </div>
 
+ <script src="js/jquery-3.5.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
 @endsection

@@ -18,29 +18,46 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'appController@index');
+Route::get('/registar', 'appController@registar');
+Route::get('imagem', 'appController@imagem');
 
 Route::get('/matriculas', 'matriculasController@index');
 Route::get('/registar_matriculas', 'matriculasController@create');
+Route::get('/visualizar_matricula/{id}', 'matriculasController@show');
 Route::post('/salvar_matricula', 'matriculasController@store');
 
+Route::get('/disciplinas', 'disciplinasController@index');
+Route::get('/registar_disciplinas', 'disciplinasController@create');
+Route::post('/salvar_disciplina', 'disciplinasController@store');
+
 Route::get('/notas', 'notasController@index');
+Route::get('/visualizar_notas/{id}', 'estudantesController@notas');
+Route::get('/retornar_estudante/{id}', 'notasController@estudante');
+
+Route::get('/horarios', 'turmasController@index');
 
 Route::get('/turmas', 'turmasController@index');
 Route::get('/termos', 'termosController@index');
 Route::get('/pautas', 'pautasController@index');
 
 Route::get('/estudantes', 'estudantesController@index');
-Route::get('/visualizar_estudante/{$id}', 'estudantesController@show');
+Route::get('/visualizar_estudante/{id}', 'estudantesController@show');
+Route::get('/editar_estudante/{id}', 'estudantesController@edit');
+Route::get('/confirmar_matricula/{id}', 'estudantesController@confirmar');
+Route::post('/actualizar_estudante/{id}', 'estudantesController@update');
 Route::get('/registar_estudante', 'estudantesController@create');
+Route::get('/pesquisar_estudante', 'estudantesController@pesquisarEstudante');
 Route::post('/salvar_estudante', 'estudantesController@store');
+Route::get('/eliminar_estudante/{id}', 'estudantesController@destroy');
 
+Route::get('/editar_professor/{id}', 'professoresController@edit');
 Route::get('/professores', 'professoresController@index');
-Route::get('/visualizar_professor', 'professoresController@show');
+Route::get('/visualizar_professor/{id}', 'professoresController@show');
 Route::get('/registar_professor', 'professoresController@create');
 Route::post('/salvar_professor', 'professoresController@store');
 
 Route::get('/admin', 'adminController@index');
-Route::get('/login', 'adminController@login');
+Route::get('/entrar', 'adminController@login');
 Route::get('/anuncios', 'anunciosController@index');
 Route::get('/cadernetas1', 'cadernetas1Controller@index');
 Route::post('/salvar_caderneta', 'cadernetasController@store');
@@ -62,6 +79,15 @@ Route::get('/declaracoes', 'declaracoesController@index');
 Route::get('/criar_mini_pautas', 'miniPautas7Controller@create');
 Route::get('/visualizar_publicacao', 'publicacoesController@show');
 Route::get('/visualizar_termo', 'termosController@show');
+
 Route::get('/visualizar_turma', 'turmasController@show');
 Route::get('/turmas_ensino_primario', 'turmasController@ensinoP');
 Route::get('/turmas_primeiro_ciclo', 'turmasController@primeiroCiclo');
+Route::get('/turmas', 'turmasController@index');
+
+
+Route::get('/visualizar_funcao/{id}', 'usuariosController@show');
+Route::get('/retornar_funcao/{id}', 'funcoesController@show');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

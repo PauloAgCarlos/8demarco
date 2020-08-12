@@ -1,6 +1,9 @@
-@extends('layouts.app')
+@extends('layouts.app3')
 
 @section('conteudo')
+
+    <link rel="stylesheet" href="../folhasCss/style.css"/>
+	<link rel="stylesheet" href="../folhasCss/caderneta.css"/>
 
 <p><a href="cader6Final.html"><input type="submit" value="FIM T" class="botao"> </a></p>
 	<table>

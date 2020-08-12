@@ -2,18 +2,21 @@
 
 @section('conteudo')
 
- <div>
-		<h1>Matricular</h1>
+ 
+<br><br><br><br>
+	<div style="color: black;">
+		
+		<div class="caso  text-center">
+			<h1>Matricular</h1>
 		<form method="post" action="/salvar_matricula">
-
 			@csrf
-
 	<fieldset>
 		<legend>Informações Obrigatórias</legend>
-		<p><label for="cNomeMatricula">Nome:<input type="text" name="tNomeMatricula" id="cNomeMatricula" placeholder="Nome Completo"></label></p>
-		<p><label for="cFotoMatricula">Foto:<input type="file" name="tFotoMatricula" id="cFotoMatricula"></label></p>
-		<p><label for="cDataNascimentoMatricula">Data de Nascimento:<input type="date" name="tDataNascimentoMatricula" id="cDataNascimentoMatricula"></label></p>
-		<p><label for="cNumeroBiMatricula">Nº de BI/Cédula:<input type="number" name="tNumeroBiMatricula" placeholder="006516352HA042" id="cNumeroBiMatricula"></label></p>
+		<p> <label for="cNumeroSGA"></label> Número de SGA: <input type="number" name="tNumeroSGA" id="cNumeroSGA" required></p>
+		<p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome"  ></p>
+		<p><label for="cTurma"> Turma:</label><input type="text" name="tTurma" id="cTurma" required></p>
+		<p><label for="cTurma"> Usuário:</label><input type="text" name="tUsuario" id="cUsuario" required></p>
+		<!-- <p><label for="cTurma"> Ano Lectivo: </label><input type="date" name="tAnoLectivo" id="cAnoLectivo" required></p> -->
 		<p><label for="cPeriodo">Período</label><select name="tPeriodo" id="cPeriodo">
 			<option>Laboral</option>
 			<option>Pós-Laboral</option>
@@ -33,13 +36,13 @@
 			<option>8ª</option>
 			<option>9ª</option>
 		</select></label></p>
-		<p> Número de SGA<input type="number" name="tNumeroSGA"></p>
+		
 	</fieldset>
-	
-	<center><input type="image" src="../imagens/cadastrar.jpg"/ value="/salvar_matricula"></center> 	
-
+	<hr>
+	<input type="submit" value="Enviar" class="btn btn-outline-success my-2 my-sm-0 text-center" id="align">	
 	</form>
+</div>
 	</div>
-	<a href="cadastroE.html"><input type="submit" value="/salvar_matricula" class="botao"></a>
+
 
 @endsection

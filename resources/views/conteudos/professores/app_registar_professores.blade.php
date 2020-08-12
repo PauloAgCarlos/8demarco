@@ -2,17 +2,17 @@
 
 @section('conteudo')
 
+<br><br><br><br>
 
+    <div class="caso text-center">
   <h1>Cadastro de Novos Professores</h1>
-  <form method="post" id="fEstudante" action="salvar_professor">
-
+  <form method="post" id="fEstudante" action="/salvar_professor" style="color: black;" enctype="multipart/form-data">
     @csrf
-
     <fieldset >
       <legend>Dados Importantes</legend>
       <p><label for="cNomeCompletoprofessor">Nome:</label><input type="text" name="tNomeCompletoprofessor" id="cNomeCompletoprofessor" placeholder="Nome Completo"/></p>
       <p><label for="cAgente">Nº De Agente:</label><input type="number" name="tAgente" id="cAgente"></p>
-      <p><label for="cFotoProfessor">Foto:</label><input type="file" name="tFotoProfessor" id="cFotoProfessor"></p>
+      <p><label for="cFotoProfessor">Foto:</label><input type="file" name="foto" id="cFotoProfessor"></p>
       <p><label for="cDataNascimentoProfessor">Data de Nascimento:</label><input type="date" name="tDataNascimento" id="cDataNascimentoProfessor"/></p>
       <p><label for="cLocalNascimentoProfessor">Local de Nascimento:</label><input type="text" name="tLocalNascimentoProfessor" id="cLocalNascimentoProfessor" placeholder="Ex.: Huíla-Lubango"/>
       <p><label for="cNum">Nº do BI:<input type="text" name="tNumeroBI" id="cNum" placeholder="Ex.:006516352HA042"/></label></p>
@@ -27,7 +27,7 @@
       <p><label for="cDataExpiracaoProfessor">Data de Expiração:</label><input type="date" name="tDataExpiracaoProfessor" id="cDataExpiracaoProfessor"/></p>
       
       <fildset>
-        Sexo:<br/><input type="radio" name="tSexo" id="cMasc"/ value="Masculino"><label for="cMasc">Masculino</label><br/>
+        Sexo:<br/><input type="radio" name="tSexo" id="cMasc"/><label for="cMasc">Masculino</label><br/>
       <input type="radio" name="tSexo" id="cFem"/><label for="cFem">Femenino</label>
     </fildset>
 
@@ -85,7 +85,9 @@
 
     </fieldset>
       
-    <center><input type="submit" value="/salvar_professor" class="botao"/></center>
+    <input type="submit" value="Registar" class="btn btn-dark my-2 my-sm-0"/>
   </form>
+</div>
+</div>
 
     @endsection

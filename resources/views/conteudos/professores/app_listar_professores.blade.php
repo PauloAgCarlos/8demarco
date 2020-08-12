@@ -2,34 +2,25 @@
 
 @section('conteudo')
 
- <div>
-		<a href="/estudantes"><input type="submit" class="btn" value="Alunos"/></a>
-		<table>
-		<h1>Listando Os Professores Cadastrados</h1>
-		<table>
-			<thead>
-			  <tr>
-				  <th>Nome</th>
-				  <th>Fotos </th>
-			  </tr>
-			</thead>
-	
-			<tbody>
-			  <tr>
-				@foreach($professores as $professor)
-				<td><a href="estudante1.html"> {{ $professor -> nome }} </a></td>
+<br><br><br><br>
+
+ <div class="caso" style="color: black;">
+
+
+
+			  <div class="text-center">
+			  <h1>Listando Professores Cadastrados</h1>
+			  	 @foreach($professores as $professor)
+			  <hr> 
+			  <a href="/visualizar_professor/{{ $professor -> id }}">  {{ $professor -> nome }} </a> 
 				 
 				@endforeach
-			  </tr>
-			  <tr>
-				@foreach($professores as $professor)
-				<td><a href="estudante1.html"> {{ $professor -> nome }} </a></td>
-				 
-				@endforeach
-				
-			  </tr>
-			 			</tbody>
-		  </table>
-	</div>
+				<hr><br><br>
+			 <p>Ir Para a Lista de Professores...</p>
+			 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Professores</button>
+			  
+			</div>
+
+</div>
 
 @endsection
